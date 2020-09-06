@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player/Ship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://EnemySpawner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Stars.tscn" type="PackedScene" id=3]
+
+[node name="Level" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.117647, 0.129412, 0.184314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ship" parent="." instance=ExtResource( 1 )]
+position = Vector2( 82.7625, 72.9219 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 2 )]
+position = Vector2( 372.05, -1.6032 )
+
+[node name="Stars" parent="." instance=ExtResource( 3 )]
+position = Vector2( 324.533, 87.5158 )
+scale = Vector2( 1, 1 )
